@@ -325,7 +325,7 @@ function changeGameState(img) {
             key += ' ' + gBoard.length ** 2
         }
         var currBestTime = localStorage.getItem(key)
-        currBestTime = (currBestTime) ? Math.max(currBestTime, gGame.secsPassed) : gGame.secsPassed
+        currBestTime = (currBestTime) ? Math.max(parseInt(currBestTime), parseInt(gGame.secsPassed)) : gGame.secsPassed
         if (currBestTime > 999) {
             currBestTime = '999' //bug-Defense until fixed
         }
