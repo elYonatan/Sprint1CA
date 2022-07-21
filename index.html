@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mine Sweeper</title>
+</head>
+
+<body onload="initGame()">
+    <h1>#BestMineSweeperOutThere</h1>
+    <div class="wrap-app">
+        <div class="app">
+            <div class="toolbar">
+                <div class="timer-container">
+                    <p class="timer">My Time:013
+                    </p>
+                    <p class="best-res">Quickest:014</p>
+                </div>
+                <div class="restart-btn-container">
+                    <div class=restart-btn><button type="button" onclick="initGame(gLevel)"></button>
+                    </div>
+                </div>
+                <div class="icons">
+                    <p class="lives"><img class="heart" src="img/heart.png" /><img class="heart"
+                            src="img/heart.png" /><img class="heart" src="img/heart.png" /></p>
+                    <p class="bulbs"> <button class="bulb"><img src="img/bulb.png"
+                                onclick="updateBulbCount(0)" /></button>
+                        <button class="bulb"><img src="img/bulb.png" onclick="updateBulbCount(1)" /></button><button
+                            class="bulb"><img src="img/bulb.png" onclick="updateBulbCount(2)" /></button>
+                    </p>
+                </div>
+            </div>
+            <div class="game-board-container">
+                <table class="game-board">
+
+                    <head>
+                    </head>
+
+                    <body>
+                    </body>
+                </table>
+            </div>
+            <div class="btns-container">
+                <div class="upper-btns"><button class="difficult-btn" onclick="initGame(EASY)">Easy</button
+                        class="difficult-btn"><button class="difficult-btn" onclick="initGame(MEDIUM)">Medium</button
+                        class="difficult-btn"><button class="difficult-btn"
+                        onclick="initGame(HARD)">Hard</button><button class="difficult-btn" onclick="initGameManually(-1)">Manually</button><button
+                        class="difficult-btn" onclick = "initGame(BOOM7)">7BOOM</button></div>
+                <div class="lower-btns"><button class="in-game-func-btn" onclick="safeClick()">Safe
+                        click</button><button class="in-game-func-btn undo" onclick="undo()">Undo</button></div>
+                <div class=" safe-clicks">
+                        <p class = "safe-counts">3 clicks available</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-over modal"></div>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
